@@ -1,0 +1,14 @@
+{
+  "name": "lbayerlein-repo_fedora",
+  "version": "0.1.0",
+  "author": "lbayerlein",
+  "summary": "It is a module for managing repositories on your Fedora Desktop",
+  "license": "Apache-2.0",
+  "source": "https://github.com/lbayerlein/repo_fedora",
+  "project_page": "https://github.com/lbayerlein/repo_fedora",
+  "issues_url": "https://github.com/lbayerlein/repo_fedora/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
