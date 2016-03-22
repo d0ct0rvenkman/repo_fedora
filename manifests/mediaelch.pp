@@ -24,7 +24,7 @@ class repo_fedora::mediaelch {
   yumrepo { 'mediaelch':
     baseurl    => $baseurl,
     mirrorlist => $mirrorlist,
-    descr      => 'Adobe Systems Incorporated',
+    descr      => 'Copr repo for Mediaelch owned by dirkdavidis',
     enabled    => $enabled,
     gpgcheck   => '0',
     gpgkey     => "https://copr-be.cloud.fedoraproject.org/results/dirkdavidis/Mediaelch/pubkey.gpg"
