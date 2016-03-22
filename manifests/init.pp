@@ -64,7 +64,7 @@ class repo_fedora (
     $enable_bumblebee                 = $repo_fedora::params::enable_bumblebee,
     #$enable_mediaelch                 = $repo_fedora::params::enable_mediaelch,
     #$enable_google_chrome             = $repo_fedora::params::enable_google_chrome,
-    #$enable_playonlinux               = $repo_fedora::params::enable_playonlinux,
+    $enable_playonlinux               = $repo_fedora::params::enable_playonlinux,
     $enable_rpmfusion_free            = $repo_fedora::params::enable_rpmfusion_free,
     $ensure_rpmfusion_nonfree         = $repo_fedora::params::ensure_rpmfusion_nonfree,
     #$enable_rpmfusion_free_testing    = $repo_fedora::params::enable_rpmfusion_free_testing,

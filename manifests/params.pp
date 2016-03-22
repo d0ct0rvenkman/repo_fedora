@@ -13,6 +13,7 @@ class repo_fedora::params {
   $rpmfusion_free_repourl           = 'http://download1.rpmfusion.org/free/fedora/releases'
   $rpmfusion_nonfree_repourl           = 'http://download1.rpmfusion.org/nonfree/fedora/releases'
   $rpmfusion_free_mirrorlist        = 'http://mirrors.rpmfusion.org'
+  $playonlinux_repourl              = 'http://rpm.playonlinux.com/fedora/yum/base'
   $debug_repourl                    = 'http://download.fedoraproject.org/pub/fedora/linux'
   $source_repourl                   = 'http://download.fedoraproject.org/pub/fedora/linux'
   $mirrorlisturl                    = 'http://mirrors.fedoraproject.org'
