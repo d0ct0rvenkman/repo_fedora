@@ -18,7 +18,7 @@ class repo_fedora::rpmfusion_nonfree {
 
   # Yumrepo ensure only in Puppet >= 3.5.0
   if versioncmp($::puppetversion, '3.5.0') >= 0 {
-    Yumrepo <| title == 'rpmfusion-nonfree' |> { ensure => $repo_fedora::ensure_rpmfusion_free }
+    Yumrepo <| title == 'rpmfusion-nonfree' |> { ensure => $repo_fedora::ensure_rpmfusion_nonfree }
   }
 
   yumrepo { 'rpmfusion-nonfree':
