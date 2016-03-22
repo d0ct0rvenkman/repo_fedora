@@ -18,7 +18,7 @@ class repo_fedora::mediaelch {
 
   # Yumrepo ensure only in Puppet >= 3.5.0
   if versioncmp($::puppetversion, '3.5.0') >= 0 {
-    Yumrepo <| title == 'mediaelch-linux' |> { ensure => $repo_fedora::ensure_mediaelch }
+    Yumrepo <| title == 'mediaelch' |> { ensure => $repo_fedora::ensure_mediaelch }
   }
 
   yumrepo { 'mediaelch':
