@@ -11,6 +11,7 @@ class repo_fedora::params {
   $bumblebee_nonfree_repourl        = 'http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora'
   $bumblebee_repourl                = 'http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora'
   $rpmfusion_free_repourl           = 'http://download1.rpmfusion.org/free/fedora/releases'
+  $rpmfusion_nonfree_repourl           = 'http://download1.rpmfusion.org/nonfree/fedora/releases'
   $rpmfusion_free_mirrorlist        = 'http://mirrors.rpmfusion.org'
   $debug_repourl                    = 'http://download.fedoraproject.org/pub/fedora/linux'
   $source_repourl                   = 'http://download.fedoraproject.org/pub/fedora/linux'

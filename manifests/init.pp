@@ -66,7 +66,7 @@ class repo_fedora (
     #$enable_google_chrome             = $repo_fedora::params::enable_google_chrome,
     #$enable_playonlinux               = $repo_fedora::params::enable_playonlinux,
     $enable_rpmfusion_free            = $repo_fedora::params::enable_rpmfusion_free,
-    #$ensure_rpmfusion_nonfree         = $repo_fedora::params::ensure_rpmfusion_nonfree,
+    $ensure_rpmfusion_nonfree         = $repo_fedora::params::ensure_rpmfusion_nonfree,
     #$enable_rpmfusion_free_testing    = $repo_fedora::params::enable_rpmfusion_free_testing,
     #$ensure_rpmfusion_nonfree_testing = $repo_fedora::params::ensure_rpmfusion_nonfree_testing,
     #$ensure_retroshare                = $repo_fedora::params::ensure_retroshare,
