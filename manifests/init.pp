@@ -60,6 +60,7 @@ class repo_fedora (
     $enable_updates_testing           = $repo_fedora::params::enable_updates_testing,
     $enable_adobe                     = $repo_fedora::params::enable_adobe,
     #$enable_bumblebee_nonfree         = $repo_fedora::params::enable_bumblebee_nonfree,
+    #$enable_bumblebee_nonfree_source  = $repo_fedora::params::enable_bumblebee_nonfree_source,
     #$enable_bumblebee                 = $repo_fedora::params::enable_bumblebee,
     #$enable_mediaelch                 = $repo_fedora::params::enable_mediaelch,
     #$enable_google_chrome             = $repo_fedora::params::enable_google_chrome,

@@ -16,6 +16,7 @@ class repo_fedora::params {
   $enable_updates_testing           = false
   $enable_adobe                     = false
   $enable_bumblebee_nonfree         = false
+  $enable_bumblebee_nonfree_source  = false
   $enable_bumblebee                 = false
   $enable_mediaelch                 = false
   $enable_google_chrome             = false
@@ -31,7 +32,7 @@ class repo_fedora::params {
   $ensure_updates_testing           = 'present'
   $ensure_adobe                     = 'present'
   $ensure_bumblebee_free            = 'present'
-  $ensure_bumblebee_nonfree         = 'present'
+  $ensure_bumblebee_nonfree_source  = 'present'
   #$ensure_source_free_testing       = 'present'
   $ensure_mediaelch                 = 'present'
   $ensure_google_chrome             = 'present'
