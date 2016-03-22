@@ -9,7 +9,7 @@ class repo_fedora::rpmfusion_free {
     $enabled = '0'
   }
   if $repo_fedora::enable_mirrorlist {
-    $mirrorlist = "${repo_fedora::rpmfusion_free_mirrorlist}/mirrorlist?repo=free-fedora-${::repo_fedora::releasever}&arch=\$basearch"
+    $mirrorlist = "${repo_fedora::rpmfusion_mirrorlist}/mirrorlist?repo=free-fedora-${::repo_fedora::releasever}&arch=\$basearch"
     $baseurl = 'absent'
   } else {
     $mirrorlist = 'absent'
