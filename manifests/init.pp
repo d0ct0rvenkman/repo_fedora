@@ -96,7 +96,7 @@ class repo_fedora (
   include repo_fedora::updates
   include repo_fedora::updates_testing
   include repo_fedora::adobe
-  #include repo_fedora::plus
+  include repo_fedora::bumblebee_nonfree
   #include repo_fedora::scl
   #include repo_fedora::updates
   #include repo_fedora::fasttrack

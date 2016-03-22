@@ -8,6 +8,7 @@ class repo_fedora::params {
   $enable_mirrorlist                = true
   $repourl                          = 'http://mirror.fedoraproject.org/pub/fedora/linux/releases'
   $adobe_repourl                    = 'http://linuxdownload.adobe.com/linux/x86_64'
+  $bumblebee_nonfree_repourl        = 'http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora'
   $debug_repourl                    = 'http://download.fedoraproject.org/pub/fedora/linux'
   $source_repourl                   = 'http://download.fedoraproject.org/pub/fedora/linux'
   $mirrorlisturl                    = 'http://mirrors.fedoraproject.org'
