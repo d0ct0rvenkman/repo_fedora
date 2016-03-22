@@ -1,19 +1,19 @@
 # Optional parameters in setting up Fedora Yum repository
 class repo_fedora::params {
 
-  if $::operatingsystemmajrelease {
-    $releasever = $::operatingsystemmajrelease
-  } else $::os_maj_version {
-    $releasever = $::os_maj_version
-  }
+  #if $::operatingsystemmajrelease {
+  #  $releasever = $::operatingsystemmajrelease
+  #} else $::os_maj_version {
+  #  $releasever = $::os_maj_version
+  #}
 
   $enable_mirrorlist                = true
   $repourl                          = 'http://mirror.fedoraproject.org/pub/fedora/linux/releases'
   $debug_repourl                    = 'http://download.fedoraproject.org/pub/fedora/linux'
   $source_repourl                   = 'http://download.fedoraproject.org/pub/fedora/linux'
-  $mirrorlisturl                    = 'http://mirrors.fedoraproject.org
+  $mirrorlisturl                    = 'http://mirrors.fedoraproject.org'
   $enable_fedora                    = true
-  $enable_updates                   = true
+  $enable_updates                   = false
   $enable_updates_testing           = false
   $enable_adobe                     = false
   $enable_bumblebee_nonfree         = false
@@ -33,7 +33,7 @@ class repo_fedora::params {
   $ensure_adobe                     = 'present'
   $ensure_bumblebee_free            = 'present'
   $ensure_bumblebee_nonfree         = 'present'
-  $ensure_source_free_testing       = 'present'
+  #$ensure_source_free_testing       = 'present'
   $ensure_mediaelch                 = 'present'
   $ensure_google_chrome             = 'present'
   $ensure_playonlinux               = 'present'
@@ -43,22 +43,22 @@ class repo_fedora::params {
   $ensure_rpmfusion_nonfree_testing = 'present'
   $ensure_retroshare                = 'present'
 
-  case $releasever {
-    '7': {
-      $ensure_contrib          = 'absent'
-      $ensure_scl              = 'absent'
-      $mirrorlist_tail         = '&infra=$infra'
-    }
-    '6': {
-      $ensure_contrib          = 'present'
-      $ensure_scl              = 'present'
-      $mirrorlist_tail         = '&infra=$infra'
-    }
-    '5': {
-      $ensure_contrib          = 'present'
-      $ensure_scl              = 'absent'
-      $mirrorlist_tail         = ''
-    }
-    default: { }
-  }
+  #case $releasever {
+  #  '7': {
+  #    $ensure_contrib          = 'absent'
+  #    $ensure_scl              = 'absent'
+  #    $mirrorlist_tail         = '&infra=$infra'
+  #  }
+  #  '6': {
+  #    $ensure_contrib          = 'present'
+  #    $ensure_scl              = 'present'
+  #    $mirrorlist_tail         = '&infra=$infra'
+  #  }
+  #  '5': {
+  #    $ensure_contrib          = 'present'
+  #    $ensure_scl              = 'absent'
+  #    $mirrorlist_tail         = ''
+  #  }
+  #  default: { }
+  #}
 }
