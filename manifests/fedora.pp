@@ -18,7 +18,7 @@ class repo_fedora::fedora {
 
   # Yumrepo ensure only in Puppet >= 3.5.0
   if versioncmp($::puppetversion, '3.5.0') >= 0 {
-    Yumrepo <| title == 'fedora' |> { ensure => $repo_fedora::ensure_base }
+    Yumrepo <| title == 'fedora' |> { ensure => $repo_fedora::ensure_fedora }
   }
 
   yumrepo { 'fedora':
