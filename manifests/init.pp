@@ -99,6 +99,8 @@ class repo_fedora (
   include repo_fedora::bumblebee_nonfree
   include repo_fedora::bumblebee
   include repo_fedora::rpmfusion_free
+  include repo_fedora::rpmfusion_nonfree
+  include repo_fedora::rpmfusion_playonlinux
   #include repo_fedora::fasttrack
   #include repo_fedora::source
   #include repo_fedora::debug
