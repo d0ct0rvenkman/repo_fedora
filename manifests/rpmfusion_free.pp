@@ -13,7 +13,7 @@ class repo_fedora::rpmfusion_free {
     $baseurl = 'absent'
   } else {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::rpmfusion_free_repourl}/pub/fedora/releases/${::repo_fedora::releasever}/\$basearch/os/"
+    $baseurl = "${repo_fedora::rpmfusion_free_repourl}/${::repo_fedora::releasever}/Everything\$basearch/os/"
   }
 
   # Yumrepo ensure only in Puppet >= 3.5.0
