@@ -57,8 +57,8 @@ class repo_fedora (
     $mirrorlisturl                    = $repo_fedora::params::mirrorlisturl,
     $enable_fedora                    = $repo_fedora::params::enable_fedora,
     $enable_updates                   = $repo_fedora::params::enable_updates,
-    #$enable_updates_testing           = $repo_fedora::params::enable_updates_testing,
-    #$enable_adobe                     = $repo_fedora::params::enable_adobe,
+    $enable_updates_testing           = $repo_fedora::params::enable_updates_testing,
+    $enable_adobe                     = $repo_fedora::params::enable_adobe,
     #$enable_bumblebee_nonfree         = $repo_fedora::params::enable_bumblebee_nonfree,
     #$enable_bumblebee                 = $repo_fedora::params::enable_bumblebee,
     #$enable_mediaelch                 = $repo_fedora::params::enable_mediaelch,
@@ -91,29 +91,17 @@ class repo_fedora (
     }
   }
 
-    include repo_fedora::fedora
-    include repo_fedora::updates
-    #include repo_fedora::cr
-    #include repo_fedora::extras
-    #include repo_fedora::plus
-    #include repo_fedora::scl
-    #include repo_fedora::updates
-    #include repo_fedora::fasttrack
-    #include repo_fedora::source
-    #include repo_fedora::debug
+  include repo_fedora::fedora
+  include repo_fedora::updates
+  include repo_fedora::updates_testing
+  #include repo_fedora::extras
+  #include repo_fedora::plus
+  #include repo_fedora::scl
+  #include repo_fedora::updates
+  #include repo_fedora::fasttrack
+  #include repo_fedora::source
+  #include repo_fedora::debug
 
-    anchor { 'repo_fedora::start': }->
-    Class['repo_fedora::fedora']->
-    #Class['repo_fedora::contrib']->
-    #Class['repo_fedora::cr']->
-    #Class['repo_fedora::extras']->
-    #Class['repo_fedora::plus']->
-    #Class['repo_fedora::scl']->
-    #Class['repo_fedora::updates']->
-    #Class['repo_fedora::fasttrack']->
-    #Class['repo_fedora::source']->
-    #Class['repo_fedora::debug']->
-    anchor { 'repo_fedora::end': }->
-    Package<| |>
+  #Package<| |>
 
 }
