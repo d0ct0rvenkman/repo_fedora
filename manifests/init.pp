@@ -62,7 +62,7 @@ class repo_fedora (
     $enable_bumblebee_nonfree         = $repo_fedora::params::enable_bumblebee_nonfree,
     #$enable_bumblebee_nonfree_source  = $repo_fedora::params::enable_bumblebee_nonfree_source,
     $enable_bumblebee                 = $repo_fedora::params::enable_bumblebee,
-    #$enable_mediaelch                 = $repo_fedora::params::enable_mediaelch,
+    $enable_mediaelch                 = $repo_fedora::params::enable_mediaelch,
     #$enable_google_chrome             = $repo_fedora::params::enable_google_chrome,
     $enable_playonlinux               = $repo_fedora::params::enable_playonlinux,
     $enable_rpmfusion_free            = $repo_fedora::params::enable_rpmfusion_free,
@@ -100,8 +100,8 @@ class repo_fedora (
   include repo_fedora::bumblebee
   include repo_fedora::rpmfusion_free
   include repo_fedora::rpmfusion_nonfree
-  include repo_fedora::rpmfusion_playonlinux
-  #include repo_fedora::fasttrack
+  include repo_fedora::playonlinux
+  include repo_fedora::mediaelch
   #include repo_fedora::source
   #include repo_fedora::debug
 
