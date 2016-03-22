@@ -15,6 +15,7 @@ class repo_fedora::params {
   $rpmfusion_mirrorlist             = 'http://mirrors.rpmfusion.org'
   $playonlinux_repourl              = 'http://rpm.playonlinux.com/fedora/yum/base'
   $mediaelch_repourl                = 'https://copr-be.cloud.fedoraproject.org/results/dirkdavidis/Mediaelch/fedora'
+  $google_chrome_repourl                = 'http://dl.google.com/linux/chrome/rpm/stable/x86_64'
   $debug_repourl                    = 'http://download.fedoraproject.org/pub/fedora/linux'
   $source_repourl                   = 'http://download.fedoraproject.org/pub/fedora/linux'
   $mirrorlisturl                    = 'http://mirrors.fedoraproject.org'
