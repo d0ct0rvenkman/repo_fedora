@@ -3,13 +3,13 @@ class repo_fedora::fedora {
 
   include ::repo_fedora
 
-  if $repo_fedora::enable_base {
+  if $repo_fedora::enable_fedora {
     $enabled = '1'
   } else {
     $enabled = '0'
   }
   if $repo_fedora::enable_mirrorlist {
-    $mirrorlist = "${repo_fedora::mirrorlisturl}/metalink?repo=fedora-$releasever&arch=$basearch"
+    $mirrorlist = "${repo_fedora::mirrorlisturl}/metalink?repo=fedora-${::repo_fedora::releasever}&arch=\$basearch"
     $baseurl = 'absent'
   } else {
     $mirrorlist = 'absent'
@@ -24,7 +24,7 @@ class repo_fedora::fedora {
   yumrepo { 'fedora':
     baseurl    => $baseurl,
     mirrorlist => $mirrorlist,
-    descr      => 'fedora',
+    descr      => 'Fedora $releasever - $basearch',
     enabled    => $enabled,
     gpgcheck   => '1',
     gpgkey     => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-${::repo_fedora::releasever}-\$basearch",
