@@ -105,6 +105,4 @@ class repo_fedora (
   include repo_fedora::google_chrome
   #include repo_fedora::debug
 
-  #Package<| |>
-
 }
