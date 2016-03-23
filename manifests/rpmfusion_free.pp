@@ -1,4 +1,4 @@
-# The Fedora Updates repository
+# The RPMFusion Free repository
 class repo_fedora::rpmfusion_free {
 
   include repo_fedora

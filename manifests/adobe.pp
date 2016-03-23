@@ -1,4 +1,4 @@
-# The Fedora Updates repository
+# The Adobe repository
 class repo_fedora::adobe {
 
   include repo_fedora

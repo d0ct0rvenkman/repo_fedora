@@ -1,4 +1,4 @@
-# The Fedora Updates repository
+# The Google Chrome repository
 class repo_fedora::google_chrome {
 
   include repo_fedora

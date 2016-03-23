@@ -1,4 +1,4 @@
-# The Fedora Updates repository
+# The Playonlinux repository
 class repo_fedora::playonlinux {
 
   include repo_fedora

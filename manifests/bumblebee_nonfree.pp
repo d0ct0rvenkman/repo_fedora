@@ -1,4 +1,4 @@
-# The Fedora Updates repository
+# The Bumblebee Nonfree repository
 class repo_fedora::bumblebee_nonfree {
 
   include repo_fedora

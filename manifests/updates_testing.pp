@@ -1,4 +1,4 @@
-# The Fedora Updates repository
+# The Fedora Updates testing repository
 class repo_fedora::updates_testing {
 
   include repo_fedora
