@@ -60,11 +60,13 @@ for upgrading, you may wish to include an additional section here: Upgrading
 
 Include repo_fedora in your structure
 
+```
   include repo_fedora
+```
 
 In yaml, you can handle it like
-
+```
   ---
   repo_fedora::adobe: true
   repo_fedora::playonlinux: true
-
+```
