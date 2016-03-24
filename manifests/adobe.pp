@@ -15,10 +15,13 @@ class repo_fedora::adobe {
     $mirrorlist = 'absent'
     $baseurl = $repo_fedora::adobe_repourl
   }
+  #$mirrorlist = 'absent'
+  #$baseurl = $::repo_fedora::adobe_repourl
 
   # Yumrepo ensure only in Puppet >= 3.5.0
   if versioncmp($::puppetversion, '3.5.0') >= 0 {
-    Yumrepo <| title == 'adobe-linux' |> { ensure => $repo_fedora::ensure_adobe }
+    Yumrepo <| title == 'adobe-linux' |>
+      { ensure => $repo_fedora::ensure_adobe }
   }
 
   yumrepo { 'adobe-linux':

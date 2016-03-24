@@ -9,11 +9,13 @@ class repo_fedora::updates {
     $enabled = '0'
   }
   if $repo_fedora::enable_mirrorlist {
-    $mirrorlist = "${repo_fedora::mirrorlisturl}/metalink?repo=updates-released-f${::repo_fedora::releasever}&arch=\$basearch"
+    $mirrorlist = "${repo_fedora::mirrorlisturl}/metalink?repo=\
+updates-released-f${::repo_fedora::releasever}&arch=\$basearch"
     $baseurl = 'absent'
   } else {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::repourl}/pub/fedora/linux/updates/updates/\$releasever/\$basearch/"
+    $baseurl = "${repo_fedora::repourl}/pub/fedora/linux/\
+updates/updates/\$releasever/\$basearch/"
   }
 
   # Yumrepo ensure only in Puppet >= 3.5.0

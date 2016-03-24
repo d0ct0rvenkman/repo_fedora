@@ -18,7 +18,8 @@ class repo_fedora::playonlinux {
 
   # Yumrepo ensure only in Puppet >= 3.5.0
   if versioncmp($::puppetversion, '3.5.0') >= 0 {
-    Yumrepo <| title == 'playonlinux' |> { ensure => $repo_fedora::ensure_playonlinux }
+    Yumrepo <| title == 'playonlinux' |>
+      { ensure => $repo_fedora::ensure_playonlinux }
   }
 
   yumrepo { 'playonlinux':

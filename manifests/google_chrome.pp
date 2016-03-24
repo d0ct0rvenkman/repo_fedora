@@ -18,7 +18,8 @@ class repo_fedora::google_chrome {
 
   # Yumrepo ensure only in Puppet >= 3.5.0
   if versioncmp($::puppetversion, '3.5.0') >= 0 {
-    Yumrepo <| title == 'google-chrome' |> { ensure => $repo_fedora::ensure_google_chrome}
+    Yumrepo <| title == 'google-chrome' |>
+      { ensure => $repo_fedora::ensure_google_chrome}
   }
 
   yumrepo { 'google-chrome':
