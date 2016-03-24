@@ -18,7 +18,8 @@ class repo_fedora::bumblebee {
 
   # Yumrepo ensure only in Puppet >= 3.5.0
   if versioncmp($::puppetversion, '3.5.0') >= 0 {
-    Yumrepo <| title == 'adobe-linux' |> { ensure => $repo_fedora::ensure_bumblebee }
+    Yumrepo <| title == 'adobe-linux' |>
+      { ensure => $repo_fedora::ensure_bumblebee }
   }
 
   yumrepo { 'bumblebee':
@@ -27,7 +28,7 @@ class repo_fedora::bumblebee {
     descr      => 'bumblebee for fedora Linux $releasever - $basearch - Base',
     enabled    => $enabled,
     gpgcheck   => '0',
-    gpgkey     => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-bumblebeepublic"
+    gpgkey     => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-bumblebeepublic'
     #priority   => '1',
   }
 

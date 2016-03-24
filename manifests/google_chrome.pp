@@ -10,15 +10,16 @@ class repo_fedora::google_chrome {
   }
   if $repo_fedora::enable_mirrorlist {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::google_chrome_repourl}"
+    $baseurl = $repo_fedora::google_chrome_repourl
   } else {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::google_chrome_repourl}"
+    $baseurl = $repo_fedora::google_chrome_repourl
   }
 
   # Yumrepo ensure only in Puppet >= 3.5.0
   if versioncmp($::puppetversion, '3.5.0') >= 0 {
-    Yumrepo <| title == 'google-chrome' |> { ensure => $repo_fedora::ensure_google_chrome}
+    Yumrepo <| title == 'google-chrome' |>
+      { ensure => $repo_fedora::ensure_google_chrome}
   }
 
   yumrepo { 'google-chrome':
@@ -27,7 +28,7 @@ class repo_fedora::google_chrome {
     descr      => 'google-chrome',
     enabled    => $enabled,
     gpgcheck   => '0',
-    gpgkey     => "https://dl.google.com/linux/linux_signing_key.pub",
+    gpgkey     => 'https://dl.google.com/linux/linux_signing_key.pub',
     #priority   => '1',
   }
 
