@@ -1,7 +1,8 @@
 # == Class: repo_fedora
 #
 # Configure the Fedora repositories and import GPG keys
-# It is tested on Fedora 23 only. My goal is it to support Version 22, 23 and future releases
+# It is tested on Fedora 23 only. My goal is it to support Version 22, 23 and 
+# future releases
 #
 # === Parameters:
 #
@@ -9,8 +10,8 @@
 #                                  disables the baseurl
 #                                  type:boolean
 #
-# $repourl::                       The base repo URL, if not specified defaults to the
-#                                  Fedora Mirror
+# $repourl::                       The base repo URL, if not specified defaults
+# 				    to the Fedora Mirror
 #
 # $mirrorlisturl::                 The mirrorlist repo URL, if not specified
 #                                  defaults to the Fedora Mirror
@@ -60,16 +61,12 @@ class repo_fedora (
     $enable_updates_testing           = $repo_fedora::params::enable_updates_testing,
     $enable_adobe                     = $repo_fedora::params::enable_adobe,
     $enable_bumblebee_nonfree         = $repo_fedora::params::enable_bumblebee_nonfree,
-    #$enable_bumblebee_nonfree_source  = $repo_fedora::params::enable_bumblebee_nonfree_source,
     $enable_bumblebee                 = $repo_fedora::params::enable_bumblebee,
     $enable_mediaelch                 = $repo_fedora::params::enable_mediaelch,
     $enable_google_chrome             = $repo_fedora::params::enable_google_chrome,
     $enable_playonlinux               = $repo_fedora::params::enable_playonlinux,
     $enable_rpmfusion_free            = $repo_fedora::params::enable_rpmfusion_free,
     $ensure_rpmfusion_nonfree         = $repo_fedora::params::ensure_rpmfusion_nonfree,
-    #$enable_rpmfusion_free_testing    = $repo_fedora::params::enable_rpmfusion_free_testing,
-    #$ensure_rpmfusion_nonfree_testing = $repo_fedora::params::ensure_rpmfusion_nonfree_testing,
-    #$ensure_retroshare                = $repo_fedora::params::ensure_retroshare,
   ) inherits repo_fedora::params {
 
   #validate_bool($enable_mirrorlist)
