@@ -27,7 +27,7 @@ class repo_fedora::mediaelch {
     descr      => 'Copr repo for Mediaelch owned by dirkdavidis',
     enabled    => $enabled,
     gpgcheck   => '0',
-    gpgkey     => "https://copr-be.cloud.fedoraproject.org/results/dirkdavidis/Mediaelch/pubkey.gpg"
+    gpgkey     => 'https://copr-be.cloud.fedoraproject.org/results/dirkdavidis/Mediaelch/pubkey.gpg'
     #priority   => '1',
   }
 

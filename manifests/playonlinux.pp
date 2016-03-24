@@ -10,10 +10,10 @@ class repo_fedora::playonlinux {
   }
   if $repo_fedora::enable_mirrorlist {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::playonlinux_repourl}"
+    $baseurl = $repo_fedora::playonlinux_repourl
   } else {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::playonlinux_repourl}"
+    $baseurl = $repo_fedora::playonlinux_repourl
   }
 
   # Yumrepo ensure only in Puppet >= 3.5.0
@@ -27,7 +27,7 @@ class repo_fedora::playonlinux {
     descr      => 'Adobe Systems Incorporated',
     enabled    => $enabled,
     gpgcheck   => '0',
-    gpgkey     => "http://rpm.playonlinux.com/public.gpg"
+    gpgkey     => 'http://rpm.playonlinux.com/public.gpg'
     #priority   => '1',
   }
 

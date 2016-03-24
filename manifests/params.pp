@@ -3,7 +3,7 @@ class repo_fedora::params {
 
   if $::operatingsystemrelease {
     $releasever = $::operatingsystemrelease
-  } 
+  }
 
   $enable_mirrorlist                = true
   $repourl                          = 'http://mirror.fedoraproject.org/pub/fedora/linux/releases'
@@ -15,7 +15,7 @@ class repo_fedora::params {
   $rpmfusion_mirrorlist             = 'http://mirrors.rpmfusion.org'
   $playonlinux_repourl              = 'http://rpm.playonlinux.com/fedora/yum/base'
   $mediaelch_repourl                = 'https://copr-be.cloud.fedoraproject.org/results/dirkdavidis/Mediaelch/fedora'
-  $google_chrome_repourl                = 'http://dl.google.com/linux/chrome/rpm/stable/x86_64'
+  $google_chrome_repourl            = 'http://dl.google.com/linux/chrome/rpm/stable/x86_64'
   $debug_repourl                    = 'http://download.fedoraproject.org/pub/fedora/linux'
   $source_repourl                   = 'http://download.fedoraproject.org/pub/fedora/linux'
   $mirrorlisturl                    = 'http://mirrors.fedoraproject.org'
@@ -41,7 +41,7 @@ class repo_fedora::params {
   $ensure_adobe                     = 'present'
   $ensure_bumblebee_free            = 'present'
   $ensure_bumblebee_nonfree_source  = 'present'
-  #$ensure_source_free_testing       = 'present'
+  #$ensure_source_free_testing      = 'present'
   $ensure_mediaelch                 = 'present'
   $ensure_google_chrome             = 'present'
   $ensure_playonlinux               = 'present'

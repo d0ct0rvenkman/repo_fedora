@@ -10,10 +10,10 @@ class repo_fedora::adobe {
   }
   if $repo_fedora::enable_mirrorlist {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::adobe_repourl}"
+    $baseurl = $repo_fedora::adobe_repourl
   } else {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::adobe_repourl}"
+    $baseurl = $repo_fedora::adobe_repourl
   }
 
   # Yumrepo ensure only in Puppet >= 3.5.0
@@ -27,7 +27,7 @@ class repo_fedora::adobe {
     descr      => 'Adobe Systems Incorporated',
     enabled    => $enabled,
     gpgcheck   => '0',
-    gpgkey     => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux"
+    gpgkey     => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux'
     #priority   => '1',
   }
 

@@ -27,7 +27,7 @@ class repo_fedora::bumblebee {
     descr      => 'bumblebee for fedora Linux $releasever - $basearch - Base',
     enabled    => $enabled,
     gpgcheck   => '0',
-    gpgkey     => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-bumblebeepublic"
+    gpgkey     => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-bumblebeepublic'
     #priority   => '1',
   }
 

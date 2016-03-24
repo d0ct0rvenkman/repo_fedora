@@ -27,7 +27,7 @@ class repo_fedora::bumblebee_nonfree {
     descr      => 'bumblebee nonfree for fedora Linux $releasever - $basearch - Base',
     enabled    => $enabled,
     gpgcheck   => '0',
-    gpgkey     => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-bumblebee-nonfree-public"
+    gpgkey     => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-bumblebee-nonfree-public'
     #priority   => '1',
   }
 

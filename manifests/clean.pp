@@ -2,7 +2,7 @@
 #
 class repo_fedora::clean {
 
-  file { '/etc/yum.repos.d/': 
+  file { '/etc/yum.repos.d/':
     ensure  => directory,
     purge   => true,
     recurse => true,
