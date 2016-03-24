@@ -41,7 +41,7 @@ class repo_fedora::params {
   $ensure_adobe                     = 'present'
   $ensure_bumblebee_free            = 'present'
   $ensure_bumblebee_nonfree_source  = 'present'
-  #$ensure_source_free_testing       = 'present'
+  #$ensure_source_free_testing      = 'present'
   $ensure_mediaelch                 = 'present'
   $ensure_google_chrome             = 'present'
   $ensure_playonlinux               = 'present'
