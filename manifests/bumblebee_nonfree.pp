@@ -27,8 +27,8 @@ ${repo_fedora::releasever}"
   yumrepo { 'bumblebee-nonfree':
     baseurl    => $baseurl,
     mirrorlist => $mirrorlist,
-    descr      => "bumblebee nonfree for Fedora Linux \
-\$releasever - \$basearch - Base",
+    descr      => "bumblebee nonfree for fedora \
+Linux \$releasever - \$basearch - Base",
     enabled    => $enabled,
     gpgcheck   => '0',
     gpgkey     => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-bumblebee-nonfree-public'
