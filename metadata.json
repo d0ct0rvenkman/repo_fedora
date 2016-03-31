@@ -1,6 +1,6 @@
 {
-  "name": "lbayerlein-repo_fedora",
-  "version": "0.2.0",
+  "name": "balu-repo_fedora",
+  "version": "0.2.5",
   "author": "lbayerlein",
   "summary": "It is a module for managing repositories on your Fedora Desktop",
   "license": "Apache-2.0",
