@@ -3,7 +3,7 @@ class repo_fedora::mediaelch {
 
   include repo_fedora
   $baseurl = "${repo_fedora::mediaelch_repourl}-\
-${::repo_fedora::releasever}-\$basearch"
+${repo_fedora::releasever}-\$basearch"
 
   if $repo_fedora::enable_mediaelch {
     $enabled = '1'
