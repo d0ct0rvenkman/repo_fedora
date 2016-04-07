@@ -1,4 +1,5 @@
 # repo_fedora
+[![Build Status](https://travis-ci.org/lbayerlein/repo_fedora.svg?branch=master)](https://travis-ci.org/lbayerlein/repo_fedora)
 
 #### Table of Contents
 
