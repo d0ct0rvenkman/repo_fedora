@@ -28,6 +28,7 @@ class repo_fedora::params {
   $enable_bumblebee_nonfree_source  = false
   $enable_bumblebee                 = false
   $enable_mediaelch                 = false
+  $enable_spotify                   = false
   $enable_google_chrome             = false
   $enable_playonlinux               = false
   $enable_rpmfusion_free            = false
