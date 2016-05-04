@@ -2,7 +2,7 @@
 class repo_fedora::spotify {
 
   include repo_fedora
-  $baseurl = "${repo_fedora::spotify_repourl}-\
+  $baseurl = "${repo_fedora::spotify_repourl}/\
 fedora-${repo_fedora::releasever}/\$basearch"
 
   if $repo_fedora::enable_spotify {
