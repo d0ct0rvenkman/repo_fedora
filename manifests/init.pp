@@ -62,6 +62,7 @@ class repo_fedora (
     $enable_bumblebee_nonfree         = $repo_fedora::params::enable_bumblebee_nonfree, # lint:ignore:80chars
     $enable_bumblebee                 = $repo_fedora::params::enable_bumblebee,
     $enable_mediaelch                 = $repo_fedora::params::enable_mediaelch,
+    $enable_spotify                   = $repo_fedora::params::enable_spotify,
     $enable_google_chrome             = $repo_fedora::params::enable_google_chrome, # lint:ignore:80chars
     $enable_playonlinux               = $repo_fedora::params::enable_playonlinux, # lint:ignore:80chars
     $enable_rpmfusion_free            = $repo_fedora::params::enable_rpmfusion_free, # lint:ignore:80chars
@@ -99,6 +100,7 @@ class repo_fedora (
   include repo_fedora::rpmfusion_nonfree
   include repo_fedora::playonlinux
   include repo_fedora::mediaelch
+  include repo_fedora::spotify
   include repo_fedora::google_chrome
   #include repo_fedora::debug
 
