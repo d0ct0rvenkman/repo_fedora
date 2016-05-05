@@ -11,6 +11,7 @@ class repo_fedora::params {
   $bumblebee_nonfree_repourl        = 'http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora'
   $bumblebee_repourl                = 'http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee/fedora'
   $rpmfusion_free_repourl           = 'http://download1.rpmfusion.org/free/fedora/releases'
+  $rpmfusion_free_updates_repourl   = 'http://download1.rpmfusion.org/free/fedora/updates'
   $rpmfusion_nonfree_repourl        = 'http://download1.rpmfusion.org/nonfree/fedora/releases'
   $rpmfusion_mirrorlist             = 'http://mirrors.rpmfusion.org'
   $playonlinux_repourl              = 'http://rpm.playonlinux.com/fedora/yum/base'
@@ -32,6 +33,7 @@ class repo_fedora::params {
   $enable_google_chrome             = false
   $enable_playonlinux               = false
   $enable_rpmfusion_free            = false
+  $enable_rpmfusion_free_updates    = false
   $enable_rpmfusion_nonfree         = false
   $enable_rpmfusion_free_testing    = false
   $enable_rpmfusion_nonfree_testing = false
