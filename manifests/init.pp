@@ -66,6 +66,7 @@ class repo_fedora (
     $enable_google_chrome             = $repo_fedora::params::enable_google_chrome, # lint:ignore:80chars
     $enable_playonlinux               = $repo_fedora::params::enable_playonlinux, # lint:ignore:80chars
     $enable_rpmfusion_free            = $repo_fedora::params::enable_rpmfusion_free, # lint:ignore:80chars
+    $enable_rpmfusion_free_updates    = $repo_fedora::params::enable_rpmfusion_free_updates, # lint:ignore:80chars
     $enable_rpmfusion_nonfree_updates = $repo_fedora::params::enable_rpmfusion_nonfree_updates, # lint:ignore:80chars
     $enable_rpmfusion_nonfree         = $repo_fedora::params::enable_rpmfusion_nonfree, # lint:ignore:80chars
   ) inherits repo_fedora::params {
