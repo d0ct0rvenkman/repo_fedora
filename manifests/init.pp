@@ -94,22 +94,24 @@ class repo_fedora (
     class { 'repo_fedora::clean':
       stage => repo_fedora_clean,
     }
+
+    include repo_fedora::fedora
+    include repo_fedora::updates
+    include repo_fedora::updates_testing
+    include repo_fedora::adobe
+    include repo_fedora::bumblebee_nonfree
+    include repo_fedora::bumblebee
+    include repo_fedora::rpmfusion_free
+    include repo_fedora::rpmfusion_free_updates
+    include repo_fedora::rpmfusion_nonfree_updates
+    include repo_fedora::rpmfusion_nonfree
+    include repo_fedora::playonlinux
+    include repo_fedora::mediaelch
+    include repo_fedora::spotify
+    include repo_fedora::google_chrome
+    #include repo_fedora::debug
   }
-
-  include repo_fedora::fedora
-  include repo_fedora::updates
-  include repo_fedora::updates_testing
-  include repo_fedora::adobe
-  include repo_fedora::bumblebee_nonfree
-  include repo_fedora::bumblebee
-  include repo_fedora::rpmfusion_free
-  include repo_fedora::rpmfusion_free_updates
-  include repo_fedora::rpmfusion_nonfree_updates
-  include repo_fedora::rpmfusion_nonfree
-  include repo_fedora::playonlinux
-  include repo_fedora::mediaelch
-  include repo_fedora::spotify
-  include repo_fedora::google_chrome
-  #include repo_fedora::debug
-
+  else {
+    notice("Class repo_fedora performing a no-op on a non-Fedora operating system (${$::operatingsystem})")
+  }
 }
