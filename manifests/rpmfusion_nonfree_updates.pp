@@ -9,13 +9,11 @@ class repo_fedora::rpmfusion_nonfree_updates {
     $enabled = '0'
   }
   if $repo_fedora::enable_mirrorlist {
-    $mirrorlist = "${repo_fedora::rpmfusion_mirrorlist}/mirrorlist?\
-repo=nonfree-fedora-updates-released-${::repo_fedora::releasever}&arch=\$basearch"
+    $mirrorlist = "${repo_fedora::rpmfusion_mirrorlist}/mirrorlist?repo=nonfree-fedora-updates-released-${::repo_fedora::releasever}&arch=\$basearch"
     $baseurl = 'absent'
   } else {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::rpmfusion_nonfree_updates_repourl}/\
-${::repo_fedora::releasever}/${::repo_fedora::releasever}\$basearch/"
+    $baseurl = "${repo_fedora::rpmfusion_nonfree_updates_repourl}/${::repo_fedora::releasever}/${::repo_fedora::releasever}/\$basearch/"
   }
 
   # Yumrepo ensure only in Puppet >= 3.5.0
