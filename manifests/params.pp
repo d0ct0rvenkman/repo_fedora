@@ -5,7 +5,7 @@ class repo_fedora::params {
     $releasever = $::operatingsystemrelease
   }
 
-  $enable_mirrorlist                 = true
+  $enable_metalink                   = true
   $repourl                           = 'http://mirror.fedoraproject.org/pub/fedora/linux'
   $adobe_repourl                     = 'http://linuxdownload.adobe.com/linux/x86_64'
   $bumblebee_nonfree_repourl         = 'http://install.linux.ncsu.edu/pub/yum/itecs/public/bumblebee-nonfree/fedora'
@@ -21,7 +21,7 @@ class repo_fedora::params {
   $google_chrome_repourl             = 'http://dl.google.com/linux/chrome/rpm/stable/x86_64'
   $debug_repourl                     = 'http://download.fedoraproject.org/pub/fedora/linux'
   $source_repourl                    = 'http://download.fedoraproject.org/pub/fedora/linux'
-  $mirrorlisturl                     = 'http://mirrors.fedoraproject.org'
+  $metalinkurl                       = 'http://mirrors.fedoraproject.org'
   $enable_fedora                     = true
   $enable_updates                    = true
   $enable_updates_testing            = false
