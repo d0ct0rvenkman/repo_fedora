@@ -24,7 +24,7 @@ updates-testing-f${::repo_fedora::releasever}&arch=\$basearch"
       { ensure => $repo_fedora::ensure_updates_testing }
   }
 
-  yumrepo { 'fedora-updates-testing':
+  yumrepo { 'updates-testing':
     baseurl    => $baseurl,
     mirrorlist => $mirrorlist,
     descr      => 'Fedora $releasever - $basearch - Updates',

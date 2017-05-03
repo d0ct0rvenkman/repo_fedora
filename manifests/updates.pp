@@ -22,7 +22,7 @@ updates-released-f${::repo_fedora::releasever}&arch=\$basearch"
     Yumrepo <| title == 'updates' |> { ensure => $repo_fedora::ensure_updates }
   }
 
-  yumrepo { 'fedora-updates':
+  yumrepo { 'updates':
     baseurl    => $baseurl,
     mirrorlist => $mirrorlist,
     descr      => 'Fedora $releasever - $basearch - Updates',
