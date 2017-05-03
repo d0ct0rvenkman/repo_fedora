@@ -6,14 +6,14 @@
 #
 # === Parameters:
 #
-# $enable_mirrorlist::             Enables the yumrepo mirrorlist parameter and
+# $enable_metalink::             Enables the yumrepo metalink parameter and
 #                                  disables the baseurl
 #                                  type:boolean
 #
 # $repourl::                       The base repo URL, if not specified
 #                                  defaults to the Fedora Mirror
 #
-# $mirrorlisturl::                 The mirrorlist repo URL, if not specified
+# $metalinkurl::                 The metalink repo URL, if not specified
 #                                  defaults to the Fedora Mirror
 #
 # $enable_base::                   Enable the Fedora Base Repo
@@ -54,10 +54,10 @@
 #
 
 class repo_fedora (
-    $enable_mirrorlist                = $repo_fedora::params::enable_mirrorlist,
+    $enable_metalink                  = $repo_fedora::params::enable_metalink,
     $repourl                          = $repo_fedora::params::repourl,
     $source_repourl                   = $repo_fedora::params::source_repourl,
-    $mirrorlisturl                    = $repo_fedora::params::mirrorlisturl,
+    $metalinkurl                      = $repo_fedora::params::metalinkurl,
     $enable_fedora                    = $repo_fedora::params::enable_fedora,
     $enable_updates                   = $repo_fedora::params::enable_updates, # lint:ignore:80chars
     $enable_updates_testing           = $repo_fedora::params::enable_updates_testing, # lint:ignore:80chars
@@ -76,11 +76,11 @@ class repo_fedora (
   ) inherits repo_fedora::params {
 
 
-  #validate_bool($enable_mirrorlist)
+  #validate_bool($enable_metalink)
   #validate_string($repourl)
   #validate_string($debug_repourl)
   #validate_string($source_repourl)
-  #validate_string($mirrorlisturl)
+  #validate_string($metalinkurl)
   #validate_bool($enable_fedora)
   #validate_bool($enable_updates)
 
