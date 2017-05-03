@@ -26,7 +26,7 @@ fedora-${repo_fedora::releasever}&arch=\$basearch":}
   yumrepo { 'fedora':
     baseurl         => $baseurl,
     metalink        => $metalink,
-    metadata_expire => '6h'
+    metadata_expire => '6h',
     descr           => 'Fedora $releasever - $basearch',
     enabled         => $enabled,
     gpgcheck        => '1',
