@@ -14,8 +14,7 @@ updates-released-f${::repo_fedora::releasever}&arch=\$basearch"
     $baseurl = 'absent'
   } else {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::repourl}/pub/fedora/linux/\
-updates/updates/\$releasever/\$basearch/"
+    $baseurl = "${repo_fedora::repourl}/updates/\$releasever/\$basearch/"
   }
 
   # Yumrepo ensure only in Puppet >= 3.5.0

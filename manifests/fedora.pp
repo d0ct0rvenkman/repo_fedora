@@ -14,7 +14,7 @@ fedora-${repo_fedora::releasever}&arch=\$basearch"
     $baseurl = 'absent'
   } else {
     $mirrorlist = 'absent'
-    $baseurl = "${repo_fedora::repourl}/\$releasever/Everything/\$basearch/os/"
+    $baseurl = "${repo_fedora::repourl}/releases/\$releasever/Everything/\$basearch/os/"
   }
 
   notify { "${repo_fedora::mirrorlisturl}/metalink?repo=\
