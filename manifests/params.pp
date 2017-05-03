@@ -40,6 +40,7 @@ class repo_fedora::params {
   $enable_rpmfusion_free_testing     = false
   $enable_rpmfusion_nonfree_testing  = false
   $enable_retroshare                 = false
+  $enable_cleaning                   = false
   $ostype                            = 'Fedora'
   $ensure_fedora                     = 'present'
   $ensure_updates                    = 'present'

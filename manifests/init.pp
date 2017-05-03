@@ -10,13 +10,16 @@
 #                                  disables the baseurl
 #                                  type:boolean
 #
-# $repourl::                       The base repo URL, if not specified 
+# $repourl::                       The base repo URL, if not specified
 #                                  defaults to the Fedora Mirror
 #
 # $mirrorlisturl::                 The mirrorlist repo URL, if not specified
 #                                  defaults to the Fedora Mirror
 #
 # $enable_base::                   Enable the Fedora Base Repo
+#                                  type:boolean
+#
+# $enable_cleaning::               Enable cleaning of /etc/yum.repos.d
 #                                  type:boolean
 #
 # $enable_contrib::                Enable the Fedora User Contrib Repo
@@ -69,6 +72,7 @@ class repo_fedora (
     $enable_rpmfusion_free_updates    = $repo_fedora::params::enable_rpmfusion_free_updates, # lint:ignore:80chars
     $enable_rpmfusion_nonfree_updates = $repo_fedora::params::enable_rpmfusion_nonfree_updates, # lint:ignore:80chars
     $enable_rpmfusion_nonfree         = $repo_fedora::params::enable_rpmfusion_nonfree, # lint:ignore:80chars
+    $enable_cleaning                  = $repo_fedora::params::enable_cleaning,
   ) inherits repo_fedora::params {
 
 
