@@ -29,7 +29,7 @@ ${::repo_fedora::releasever}/${::repo_fedora::releasever}\$basearch/"
     mirrorlist => $mirrorlist,
     descr      => 'RPM Fusion for Fedora $releasever - Free - Updates',
     enabled    => $enabled,
-    gpgcheck   => '0',
+    gpgcheck   => '1',
     gpgkey     => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-${repo_fedora::releasever}"
     #priority   => '1',
   }

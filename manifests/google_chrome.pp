@@ -27,7 +27,7 @@ class repo_fedora::google_chrome {
     mirrorlist => $mirrorlist,
     descr      => 'google-chrome',
     enabled    => $enabled,
-    gpgcheck   => '0',
+    gpgcheck   => '1',
     gpgkey     => 'https://dl.google.com/linux/linux_signing_key.pub',
     #priority   => '1',
   }
