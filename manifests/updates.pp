@@ -9,8 +9,7 @@ class repo_fedora::updates {
     $enabled = '0'
   }
   if $repo_fedora::enable_metalink {
-    $metalink = "${repo_fedora::metalinkurl}/metalink?repo=\
-updates-released-f${::repo_fedora::releasever}&arch=\$basearch"
+    $metalink = "${repo_fedora::metalinkurl}/metalink?repo=updates-released-f${::repo_fedora::releasever}&arch=\$basearch"
     $baseurl = 'absent'
   } else {
     $metalink = 'absent'

@@ -16,8 +16,7 @@ class repo_fedora::fedora {
     $baseurl = "${repo_fedora::repourl}/releases/\$releasever/Everything/\$basearch/os/"
   }
 
-  notify { "${repo_fedora::metalinkurl}/metalink?repo=\
-fedora-${repo_fedora::releasever}&arch=\$basearch":}
+  #notify { "${repo_fedora::metalinkurl}/metalink?repo=fedora-${repo_fedora::releasever}&arch=\$basearch":}
   # Yumrepo ensure only in Puppet >= 3.5.0
   if versioncmp($::puppetversion, '3.5.0') >= 0 {
     Yumrepo <| title == 'fedora' |> { ensure => $repo_fedora::ensure_fedora }
