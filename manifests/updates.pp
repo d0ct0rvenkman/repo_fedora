@@ -13,7 +13,7 @@ class repo_fedora::updates {
     $baseurl = 'absent'
   } else {
     $metalink = 'absent'
-    $baseurl = "${repo_fedora::repourl}/updates/\$releasever/\$basearch/"
+    $baseurl = "${repo_fedora::repourl}/updates/\$releasever/Everything/\$basearch/"
   }
 
   # Yumrepo ensure only in Puppet >= 3.5.0
